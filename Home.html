@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expense Tracker — Home</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="theme.css">
+
+  <!-- Chart.js (only used in Tracker) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="parent">
+    <div class="header-home">
+      <div class="brand">Expense Tracker <span class="emoji">💰</span></div>
+      <div class="header-buttons">
+        <button id="theme-toggle">🌙</button>
+        <button id="click-here-button">Click Here</button>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h2 class="greeting">Hello <span class="wave">👋</span>, please enter your</h2>
+      <h1 id="Name">Name</h1>
+
+      <div class="form-floating">
+        <input id="name-input" placeholder="Name Here" type="text">
+      </div>
+
+      <div style="margin-top:18px;">
+        <button id="login-button">Login</button>
+        
+
+      </div>
+    </div>
+
+    <div class="solid-circle" aria-hidden="true"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #a29bfe;
+  --background-color: #f5f3ff;
+  --text-color: #2d3436;
+  --card-bg: #a29bfe;
+  --button-bg: #6c5ce7;
+  --button-text: white;
+  --muted: rgba(45,52,54,0.7);
+}
+
+body {
+  margin: 0;
+  font-family: "Comfortaa", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.35s ease, color 0.35s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark {
+  --primary-color: #a29bfe;
+  --secondary-color: #6c5ce7;
+  --background-color: #13131b;
+  --text-color: #f5f3ff;
+  --card-bg: #2d2d3a;
+  --button-bg: #a29bfe;
+  --button-text: #14141b;
+}
+
+/* header buttons group */
+.header-buttons {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Theme toggle button shared style */
+#theme-toggle {
+  padding: 8px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: transform 0.18s ease, opacity 0.18s;
+}
+#theme-toggle:hover { transform: translateY(-2px); }
+
+/* small helper for card-like containers */
+.card-like {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+  border-radius: 10px;
+}
+
+/* button hover global */
+button:hover { transform: scale(1.02); opacity:0.98; }
+
+/* responsive */
+@media (max-width: 768px) {
+  #theme-toggle { font-size:16px; padding:6px 8px; }
+}

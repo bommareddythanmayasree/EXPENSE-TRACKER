@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expense Tracker — Dashboard</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="Tracker.css">
+  <link rel="stylesheet" href="theme.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">Expense Tracker <span id="user-name"></span> 💰</div>
+    <div class="header-buttons">
+      <button id="theme-toggle">🌙</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Input form -->
+    <div class="input-form card-like">
+      <input id="date-input" class="inputs" type="date" placeholder="dd-mm-yyyy">
+      <input id="amount-input" class="inputs" type="number" placeholder="Amount">
+      <select id="type-select" class="inputs">
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
+      </select>
+      <button id="add-button" title="Add Transaction">+</button>
+    </div>
+
+    <!-- Search / filter / export -->
+    <div class="toolbar">
+      <input id="search-input" placeholder="Search amount or type..." />
+      <select id="filter-type">
+        <option value="All">All</option>
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
+      </select>
+      
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+      <div class="card">
+        <div class="card-body">
+          <h3>Total Income <span class="icon">💵</span></h3>
+          <p class="card-amount" id="income-amount">₹ 0</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Total Expense <span class="icon">💸</span></h3>
+          <p class="card-amount" id="expense-amount">₹ 0</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Balance <span class="icon">🧾</span></h3>
+          <p class="card-amount" id="balance-amount">₹ 0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts">
+      <canvas id="pieChart" width="400" height="200"></canvas>
+
+    </div>
+
+    <!-- Transactions table -->
+    <div class="transaction-table">
+      <table>
+        <thead id="header-row">
+          <tr>
+            <th>Amount</th>
+            <th>Transaction Type</th>
+            <th>Transaction Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="transactions-body">
+          <!-- populated by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
