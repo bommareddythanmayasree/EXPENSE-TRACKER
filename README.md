@@ -2,6 +2,11 @@
 
 A modern, responsive personal finance tracker that helps users manage income, expenses, and balance with an intuitive dashboard and engaging visuals.
 
+## 🚀 Live Demo
+[Click here to view the live site]https://bommareddythanmayasree.github.io/EXPENSE-TRACKER/
+
+
+
 ## 🚀 Features
 - **Personalized Onboarding** — Welcomes users by name.
 - **Real-Time Dashboard** — Displays total income, expenses, and balance dynamically.
